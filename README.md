@@ -38,7 +38,7 @@
 - **I**ntrusion **P**revention **S**ystem
 - systém monitorující síťový provoz
 - jedná se o aktivní systém
-- IPS narozdíl od IDS může aktivně zabraňovat a blokovat detekované průniky → vyšle hlášení, zahodí škodlivé pakety nebo obnové připojení
+- IPS narozdíl od IDS může aktivně zabraňovat a blokovat detekované průniky → vyšle hlášení, zahodí škodlivé pakety nebo obnoví připojení
 
 ### HIPS
 
@@ -102,4 +102,3 @@ drop tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET TROJAN Likely Bot Nick in I
 
    - z př. → `(msg:”ET TROJAN Likely Bot Nick in IRC (USA +..)”; flow:established,to_server; flowbits:isset,is_proto_irc; content:”NICK “; pcre:”/NICK .USA.0-9{3,}/i”; reference:url,doc.emergingthreats.net/2008124; classtype:trojan-activity; sid:2008124; rev:2;)`
    - co se má stát
-
