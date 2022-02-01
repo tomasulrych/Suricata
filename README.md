@@ -5,16 +5,16 @@
 ## IDS
 
 - **I**ntrusion **D**etection **S**ystem
-- systém moniturující síťový provoz
-- detekuje neobvyklé/podezřelé aktivity, které by mohly vést k naručení bezpečnosti počítačové sítě nebo operačního systému
+- systém monitorující síťový provoz
+- detekuje neobvyklé/podezřelé aktivity, které by mohly vést k narušení bezpečnosti počítačové sítě nebo operačního systému
 - nemonitoruje pouze finální pokusy o prolomení bezpečností, ale detekuje i akce, které jim předchází
-- IDS je pasivní systém (narozdíl od IPS - **I**ntrusion **P**revention **S**ystem) → po detekci neobvyklé aktivity vygeneruje alert, provede zápis do logu a upozorní admina
+- IDS je pasivní systém (na rozdíl od IPS - **I**ntrusion **P**revention **S**ystem) → po detekci neobvyklé aktivity vygeneruje alert, provede zápis do logu a upozorní admina
 - senzor = prvek, který obsahuje mechanismy pro detekci škodlivých kódů
 
 ### HIDS
 
 - **H**ost **I**ntrusion **D**etection **S**ystem
-- beží na jednotlivých zařízeních v síti
+- běží na jednotlivých zařízeních v síti
 - zkoumá příchozí a odchozí pakety tohoto zařízení
 
 ### NIDS
@@ -38,7 +38,7 @@
 - **I**ntrusion **P**revention **S**ystem
 - systém monitorující síťový provoz
 - jedná se o aktivní systém
-- IPS narozdíl od IDS může aktivně zabraňovat a blokovat detekované průniky → vyšle hlášení, zahodí škodlivé pakety nebo obnoví připojení
+- IPS na rozdíl od IDS může aktivně zabraňovat a blokovat detekované průniky → vyšle hlášení, zahodí škodlivé pakety nebo obnoví připojení
 
 ### HIPS
 
@@ -83,7 +83,7 @@ drop tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET TROJAN Likely Bot Nick in I
 
    - osahuje **protokol**
       - z př. → `tcp`
-      - říká kterého protokolu se to týka
+      - říká kterého protokolu se to týká
       - lze vybírat ze čtyř protokolů → `tcp`, `udp`, `icmp` a `ip`
    - **source a destination IP adresy**
       - z př. → `$HOME_NET`; `$EXTERNAL_NET`
@@ -95,8 +95,8 @@ drop tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET TROJAN Likely Bot Nick in I
    - **směr**
       - z př. → `->`
       - směr, jakým se má signature shodovat
-      - nejčastěji jde šipka z leva do prava, je ale i možné, aby šla oběma směry `<>`
-      - šipka nemůže jít z prava do leva (`<-`)
+      - nejčastěji jde šipka z leva doprava, je ale i možné, aby šla oběma směry `<>`
+      - šipka nemůže jít zprava doleva (`<-`)
 
    **Možností (rule options)**
 
